@@ -1,7 +1,8 @@
 $(document).ready(function () {
 	$.ajax({
 		url: "https://decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
-		type: "GET"
+		type: "GET",
+		crossDomain: true
 	})
 	.done(function (info) {
 		var info2 = JSON.parse(info);
@@ -54,6 +55,7 @@ $(document).ready(function () {
 		$.ajax({
 			url: 'https://decomiso-rtm.000webhostapp.com/php/subir-Resto.php',
 			type: 'POST',
+			crossDomain: true,
 			data: {
 				file: filename
 			}
@@ -73,6 +75,7 @@ $(document).ready(function () {
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/SubirInventario.php",
 			type: "POST",
+			crossDomain: true,
 			datatype: "text",
 			data: {
 				data: data
@@ -91,6 +94,7 @@ $(document).ready(function () {
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/obtener-Inventario.php",
 			type: "POST",
+			crossDomain: true,
 			data: {
 				file: filename
 			}
@@ -127,7 +131,8 @@ $(document).ready(function () {
 	function BorrarDatos() {
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/BorrarDatos.php",
-			type: "POST"
+			type: "POST",
+			crossDomain: true
 		})
 		.done( function (info) {
 			console.log();
@@ -192,7 +197,8 @@ $(document).ready(function () {
 	$("#cerrarSesion").click(function() {
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/logout.php",
-			type: "GET"
+			type: "GET",
+			crossDomain: true
 		})
 		.done(function () {
 			alert("Sesión cerrada correctamente");

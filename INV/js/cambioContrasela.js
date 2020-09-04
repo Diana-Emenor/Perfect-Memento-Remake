@@ -2,6 +2,7 @@ $(function(){
 	$.ajax({
 		url: "https://decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
 		type: "GET",
+		crossDomain: true,
 		success: function (info, textStatus, xhr) {
 			console.log(info);
 			var info2 = JSON.parse(info);

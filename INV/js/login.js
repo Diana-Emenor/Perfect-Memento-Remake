@@ -7,6 +7,8 @@ $(function(){
 			dataType: "json",
 			data: data,
 			type: "GET",
+			crossDomain: true,
+			crossDomain : true,
 			success: function (page) {
 				location.href='./administracion.html';
 			},

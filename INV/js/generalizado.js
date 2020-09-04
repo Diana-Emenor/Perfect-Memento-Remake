@@ -22,6 +22,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			$("#CelTotalBarcel").append("<strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
 			$("#CelStockBarcel").append("<strong>" + new Intl.NumberFormat("en-us").format(page[1].toFixed(0)) + "</strong>");
@@ -74,6 +75,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			$("#CelTotalBimbo").append("<strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
 			$("#CelStockBimbo").append("<strong>" + new Intl.NumberFormat("en-us").format(page[1].toFixed(0)) + "</strong>");
@@ -126,6 +128,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			$("#CelTotalRicolino").append("<strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
 			$("#CelStockRicolino").append("<strong>" + new Intl.NumberFormat("en-us").format(page[1].toFixed(0)) + "</strong>");
@@ -178,6 +181,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-GENERAL.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			$("#totalBodegaBARCEL").append(new Intl.NumberFormat("en-us").format(page[0]));
 			$("#totalBodegaBIMBO").append(new Intl.NumberFormat("en-us").format(page[1]));
@@ -207,6 +211,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain : true,
 		success: function (page) {
 			dataricolino = page;
 		},
@@ -218,6 +223,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			databimbo = page;
 		},
@@ -229,6 +235,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			databarcel = page;
 		},
@@ -241,6 +248,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			var totalCelulares = 0;
 			var totalHandHelds = 0;
@@ -259,6 +267,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			var totalCelulares = 0;
 			var totalHandHelds = 0;
@@ -277,6 +286,7 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
+		crossDomain: true,
 		success: function (page) {
 			var totalCelulares = 0;
 			var totalHandHelds = 0;
@@ -313,6 +323,7 @@ $(function(){
 				data: tabla
 			},
 			type: "POST",
+			crossDomain: true,
 			success: function (file) {
 				$.fileDownload('./' + file)
 					.done(function () {

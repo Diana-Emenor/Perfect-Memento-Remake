@@ -7,6 +7,7 @@ $(function(){
 				empresa: $("#empresa").val()
 			},
 			type: "GET",
+			crossDomain: true,
 			success: function (page) {
 				console.log(page)
 				//obtiene todos los cv de cierta empresa
