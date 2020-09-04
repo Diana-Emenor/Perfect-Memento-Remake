@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reporte General de Inventario</title>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/jquery.dataTables.css">
+		<link rel="stylesheet" href="./css/cuerpo.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="row">
+								<div class="col-md-6">
+									<button  class="btn btn-outline-primary btn-block" id="principal" onclick="location.href='./'">Regresar a la página principal</button>
+								</div>
+							</div>
+							<h4 class="card-title text-center">Reporte General de Inventario</h4>
+						</div>
+						<div class="card-body">
+							<table id="reporte">
+								<thead>
+									<tr>
+									<td>ID</td>
+									<td>Region</td>
+									<td>Localidad</td>
+									<td>Fecha</td>
+									<td>Nombre de quien recibe</td>
+									<td>Dispositivo</td>
+									<td>Marca</td>
+									<td>Modelo</td>
+									<td># SERIE</td>
+									<td>Remorzar</td>
+									<td>Estado</td>
+									<td>Bodega</td>
+									<td>Empresa</td>
+									</tr>
+								</thead>
+								<tbody> <!-- Aquí se insertará los datos -->
+								</tbody>
+							</table>
+						</div>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-md-6">
+									<button  class="btn btn-outline-primary btn-block" id="exportarExcel">Exportar a Excel</button>
+								</div>
+								<div class="col-md-6">
+									<button  class="btn btn-outline-primary btn-block" id="exportarCVS">Importar a CVS</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Cargando el inventario</h4>
+					</div>
+					<div class="modal-body">
+						<h5 class="text-center">Cargando inventario, por favor espere</h5><br><br><br><br><br><br><br><br>
+						<div id="loader"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="application/javascript" src="./js/jquery.js"></script>
+		<script type="application/javascript" src="./js/bootstrap.js"></script>
+		<script type="application/javascript" src="./js/jquery.dataTables.min.js"></script>
+		<script type="application/javascript" src="./js/jquery.fileDownload.js"></script>
+		<script type="application/javascript" src="./js/reporte-general.js"></script>
+	</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reporte de Inventario</title>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/cuerpo.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm bg-primary justify-content-start navbar-dark fixed-top">
+			<div class="container">
+				<button  class="btn btn-outline-light" id="principal" onclick="location.href='./'">página principal</button>
+				<h5 class="navbar-text">Reporte General de Inventario</h5>
+				<button  class="btn btn-outline-light " id="exportarExcel">Exportar a Excel</button>
+			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class ="col-md-12">
+					<div class="card bg-light">
+						<div class="card-header">
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="card-group">
+									<div class="card bg-light">
+										<div class="card-header">
+											<h3 class="card-title text-center">Porcentaje por Empresa</h3>
+										</div>
+										<div class="card-body">
+											<div class="row no-gutters">
+												<div class="col-md-4">
+													<img src="./images/BARCEL.png" width="100" height="100">
+													<div class="alert alert-dark">
+													<strong><div id="estadoBARCEL" class="text-center"></div></strong>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<img src="./images/BIMBO.jpg" width="100" height="100">
+													<div class="alert alert-dark">
+													<strong><div id="estadoBIMBO" class="text-center"></div></strong>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<img src="./images/RICOLINO.png" width="100" height="100">
+													<div class="alert alert-dark">
+													<strong><div id="estadoRICOLINO" class="text-center"></div></strong>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card bg-light">
+										<div class="card-header">
+											<h3 class="card-title text-center">Rollout vigentes</h3>
+										</div>
+										<div class="card-body">
+											<div class="alert alert-dark">
+											<h4 id="sprint" class="text-center"></h4>
+											</div>
+										</div>
+									</div>
+									<div class="card bg-light">
+										<div class="card-header">
+											<h3 class="card-title text-center">La Fecha de hoy</h3>
+										</div>
+										<div class="card-body">
+											<div class="alert alert-dark">
+											<h4 id="fecha" class="text-center"></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-header" >
+										<h3 class="card-title text-center">Conceptos</h3>
+										<img class="mx-auto d-block" src="./images/NONE.png" width="75" height="75">
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-header" id="BARCELTEXTAREA">
+										<h3 class="card-title text-center barcel-text">Barcel</h3>
+										<img class="mx-auto d-block" src="./images/BARCEL.png" width="75" height="75">
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-header" id="BIMBOTEXTAREA">
+										<h3 class="card-title text-center bimbo-text">Bimbo</h3>
+										<img class="mx-auto d-block" src="./images/BIMBO.jpg" width="75" height="75">
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-header" id="RICOLINOTEXTAREA">
+										<h3 class="card-title text-center ricolino-text">Ricolino</h3>
+										<img class="mx-auto d-block" src="./images/RICOLINO.png" width="75" height="75">
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-header" >
+										<h3 class="card-title text-center">Total</h3>
+										<img class="mx-auto d-block" src="./images/NONE.png" width="75" height="75">
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-header" >
+										<h3 class="card-title text-center">Porcentaje</h3>
+										<img class="mx-auto d-block" src="./images/NONE.png" width="75" height="75">
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Celulares enviados a Cebes mas el 10% de stock
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelTotalBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelTotalBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelTotalRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelTotalSumatoria"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<!-- none -->
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Celulares enviados a Cebes, sin stock
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelStockBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelStockBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelStockRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="CelStockTotal"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<!-- none -->
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Hand Helds recibidas
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHRecibidasBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHRecibidasBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHRecibidasRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHRecibidasTotal"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHRecibidasPorcentaje"></div>
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Hand Helds pendiente por decomiso
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHDecomisoBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHDecomisoBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHDecomisoRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHDecomisoTotal"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="HHDecomisoPorcentaje"></div>
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Bajas solicitadas al fabricante
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasSoliBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasSoliBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasSoliRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasSoliTotal"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasSoliPorcentaje"></div>
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Bajas de administración en NTT
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasNTTBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasNTTBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasNTTRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasNTTTotal"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="BajasNTTPorcentaje"></div>
+									</div>
+								</div>
+							</div>
+							<div class="card-group">
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										Remorzadas
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="RemorzadasBarcel"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="RemorzadasBimbo"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="RemorzadasRicolino"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<div id="RemorzadasTotal"></div>
+									</div>
+								</div>
+								<div class="card bg-light">
+									<div class="card-body text-center">
+										<!-- none -->
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="application/javascript" src="./js/jquery.js"></script>
+		<script type="application/javascript" src="./js/jquery.fileDownload.js"></script>
+		<script type="application/javascript" src="./js/generalizado.js"></script>
+	</body>
+</html>
