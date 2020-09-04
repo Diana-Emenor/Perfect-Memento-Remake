@@ -1,7 +1,7 @@
 $(function(){
 	$("#empresa").change(function(){
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/obtener-ceves.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/obtener-ceves.php",
 			dataType: "json",
 			data: {
 				empresa: $("#empresa").val()
@@ -26,7 +26,7 @@ $(function(){
 	
 	$("#ceve").change(function () {
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/obtener-datos-ceve.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/obtener-datos-ceve.php",
 			dataType: "json",
 			data: {
 				ceve: $("#ceve").val()
@@ -55,7 +55,7 @@ $(function(){
 	$("#actualizar").submit(function (event) {
 		event.preventDefault();
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/actualizar-datos.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/actualizar-datos.php",
 			dataType: "json",
 			data: {
 				empresa: $("#empresa").val(),

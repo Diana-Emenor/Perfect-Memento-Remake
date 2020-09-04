@@ -19,7 +19,7 @@ $(function(){
 	var remorzadas=0;
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/reporte-BARCEL.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -71,7 +71,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/reporte-BIMBO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -123,7 +123,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/reporte-RICOLINO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -175,7 +175,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/reporte-GENERAL.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-GENERAL.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -204,7 +204,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -215,7 +215,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -226,7 +226,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -238,7 +238,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -256,7 +256,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -274,7 +274,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -307,7 +307,7 @@ $(function(){
 		tabla += "</table>";
 		console.log(tabla);
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/exportarExcel.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/exportarExcel.php",
 			dataType: "text",
 			data: {
 				data: tabla

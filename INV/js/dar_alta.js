@@ -1,6 +1,6 @@
 $(function(){
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
 		type: "GET",
 		success: function (info, textStatus, xhr) {
 			var info2 = JSON.parse(info);
@@ -19,7 +19,7 @@ $(function(){
         event.preventDefault();
 		var data = $(this).serialize();
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/alta.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/alta.php",
 			dataType: "json",
 			data: data,
 			type: "POST",
@@ -35,7 +35,7 @@ $(function(){
     
 	$("#cerrarSesion").click(function() {
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/logout.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/logout.php",
 			type: "GET",
 			success: function () {
 				alert("Sesión cerrada correctamente");

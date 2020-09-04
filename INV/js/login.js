@@ -3,7 +3,7 @@ $(function(){
 		event.preventDefault();
 		var data = $(this).serialize();
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/Login.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/Login.php",
 			dataType: "json",
 			data: data,
 			type: "GET",

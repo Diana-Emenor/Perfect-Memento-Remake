@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
 		type: "GET"
 	})
 	.done(function (info) {
@@ -52,7 +52,7 @@ $(document).ready(function () {
 		
 	function SubirResto(){
 		$.ajax({
-			url: 'decomiso-rtm.000webhostapp.com/php/subir-Resto.php',
+			url: 'https://decomiso-rtm.000webhostapp.com/php/subir-Resto.php',
 			type: 'POST',
 			data: {
 				file: filename
@@ -71,7 +71,7 @@ $(document).ready(function () {
 	
 	function SubirInventario(data) {
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/SubirInventario.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/SubirInventario.php",
 			type: "POST",
 			datatype: "text",
 			data: {
@@ -89,7 +89,7 @@ $(document).ready(function () {
 	
 	function ObtenerInventario() {
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/obtener-Inventario.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/obtener-Inventario.php",
 			type: "POST",
 			data: {
 				file: filename
@@ -126,7 +126,7 @@ $(document).ready(function () {
 		
 	function BorrarDatos() {
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/BorrarDatos.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/BorrarDatos.php",
 			type: "POST"
 		})
 		.done( function (info) {
@@ -142,7 +142,7 @@ $(document).ready(function () {
 	var uploader = new plupload.Uploader({
 		runtimes: 'html5,html4',
 		browse_button: 'myFile',
-		url: 'decomiso-rtm.000webhostapp.com/php/guardarArchivo.php',
+		url: 'https://decomiso-rtm.000webhostapp.com/php/guardarArchivo.php',
 		chunk_size: '5mb',
 		init: {
 			PostInit: function () {
@@ -191,7 +191,7 @@ $(document).ready(function () {
 	
 	$("#cerrarSesion").click(function() {
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/logout.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/logout.php",
 			type: "GET"
 		})
 		.done(function () {

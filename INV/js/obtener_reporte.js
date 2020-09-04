@@ -1,6 +1,6 @@
 $(function(){
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Receive-Inv.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Receive-Inv.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {

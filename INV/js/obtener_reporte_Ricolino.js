@@ -33,7 +33,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -63,7 +63,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/reporte-RICOLINO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -81,7 +81,7 @@ $(function(){
 	});
 	
 	$.ajax({
-		url: "decomiso-rtm.000webhostapp.com/php/Obtener-resumen-RICOLINO.php",
+		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-resumen-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
 		success: function (page) {
@@ -219,7 +219,7 @@ $(function(){
 		}
 		str+= '</tr></table>';
 		$.ajax({
-			url: "decomiso-rtm.000webhostapp.com/php/exportarExcel.php",
+			url: "https://decomiso-rtm.000webhostapp.com/php/exportarExcel.php",
 			dataType: "text",
 			data: {
 				data: str
