@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dar de alta usuario</title>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/cuerpo.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm bg-primary justify-content-start navbar-dark fixed-top">
+			<div class="container">
+				<button  class="btn btn-outline-light" id="principal" onclick="location.href='./administracion.html'">página principal</button>
+				<h5 class="navbar-text">Dar de Alta a Usuario</h5>
+				<button  class="btn btn-outline-light" id="cerrarSesion">Cerrar sesion</button>
+			</div>
+		</nav>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+						</div>
+						<div class="card-body">
+							<form id="alta" >
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text">@</span>
+									</div>
+									<input type="email" name="email" class="form-control" placeholder="Ingrese su correo" id="email">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text">**</span>
+									</div>
+									<input type="password" name="pwd" class="form-control" placeholder="Ingrese la contraseña" id="pwd">
+								</div>
+								<input type="submit" name="submit" class="btn btn-primary btn-block" value="Dar de alta"></input>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="application/javascript" src="./js/jquery.js"></script>
+		<script type="application/javascript" src="./js/dar_alta.js"></script>
+	</body>
+</html>
