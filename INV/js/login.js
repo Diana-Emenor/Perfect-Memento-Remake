@@ -4,7 +4,8 @@ $(function(){
 		var data = $(this).serialize();
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/Login.php",
-			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/' },
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"},
 			dataType: "jsonp",
 			data: data,
 			type: "GET",
