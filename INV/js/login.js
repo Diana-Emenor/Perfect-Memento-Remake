@@ -6,7 +6,7 @@ $(function(){
 			url: "https://decomiso-rtm.000webhostapp.com/php/Login.php",
 			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
 						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
-			dataType: "jsonp",
+			dataType: "json",
 			data: data,
 			type: "GET",
 			crossDomain: true,
