@@ -3,12 +3,10 @@ $(function(){
 		event.preventDefault();
 		var data = $(this).serialize();
 		$.ajax({
-			url: "https://decomiso-rtm.000webhostapp.com/php/Login.php",
+			url: "./php/Login.php",
 			dataType: "json",
 			data: data,
 			type: "GET",
-			crossDomain: true,
-			crossDomain : true,
 			success: function (page) {
 				location.href='./administracion.html';
 			},
