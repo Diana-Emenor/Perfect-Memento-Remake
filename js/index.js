@@ -1,55 +1,67 @@
 $(function(){
-	//Fairies menu
-	$("#cirno").click(function(event) {
+	
+	function migrate(event, Name, Type){
 		event.preventDefault();
-		localStorage.setItem("Tab","Cirno");
-		window.location.href = "./Fairy.html";
+		localStorage.setItem("Tab", Name);
+		window.location.href = "./"+ Type +".html";
+	}
+	
+	$("#cirno").click(function(event) {
+		migrate(event, "Cirno", "Fairy");
 	});
 	$("#lily").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","LilyWhite");
-		window.location.href = "./Fairy.html";
+		migrate(event, "LilyWhite", "Fairy");
 	});
 	$("#lily2").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","LilyWhite");
-		window.location.href = "./Fairy.html";
+		migrate(event, "LilyWhite", "Fairy");
 	});
 	$("#sunny").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","SunnyMilk");
-		window.location.href = "./Fairy.html";
+		migrate(event, "SunnyMilk", "Fairy");
 	});
 	$("#luna").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","LunaChild");
-		window.location.href = "./Fairy.html";
+		migrate(event, "LunaChild", "Fairy");
 	});
 	$("#sapphire").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","StarSapphire");
-		window.location.href = "./Fairy.html";
+		migrate(event, "StarSapphire", "Fairy");
 	});
 	
 	//Yuurei menu
 	$("#youmu").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","Youmu");
-		window.location.href = "./Yuurei.html";
+		migrate(event, "Youmu", "Yuurei");
 	});
 	$("#lunasa").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","Lunasa");
-		window.location.href = "./Yuurei.html";
+		migrate(event, "Lunasa", "Yuurei");
 	});
 	$("#merlin").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","Merlin");
-		window.location.href = "./Yuurei.html";
+		migrate(event, "Merlin", "Yuurei");
 	});
 	$("#lyrica").click(function(event) {
-		event.preventDefault();
-		localStorage.setItem("Tab","Lyrica");
-		window.location.href = "./Yuurei.html";
+		migrate(event, "Lyrica", "Yuurei");
+	});
+	
+	//Youkai
+	$("#rumia").click(function(event) {
+		migrate(event, "Rumia", "Youkai");
+	});
+	$("#letty").click(function(event) {
+		migrate(event, "Letty", "Youkai");
+	});
+	$("#wriggle").click(function(event) {
+		migrate(event, "Wriggle", "Youkai");
+	});
+	$("#mystia").click(function(event) {
+		migrate(event, "Mystia", "Youkai");
+	});
+	$("#meiling").click(function(event) {
+		migrate(event, "Meiling", "Youkai");
+	});
+	$("#medicine").click(function(event) {
+		migrate(event, "Medicine", "Youkai");
+	});
+	$("#yuuka").click(function(event) {
+		migrate(event, "Yuuka", "Youkai");
+	});
+	$("#yukari").click(function(event) {
+		migrate(event, "Yukari", "Youkai");
 	});
 });
