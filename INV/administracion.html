@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Opciones Administrativas</title>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/cuerpo.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm bg-primary justify-content-start navbar-dark fixed-top">
+			<div class="container">
+				<button  class="btn btn-outline-light" id="principal" onclick="location.href='./'">página principal</button>
+				<h5 class="navbar-text">Opciones Administrativas</h5>
+				<button  class="btn btn-outline-light" id="cerrarSesion">Cerrar sesion</button>
+			</div>
+		</nav>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card ">
+						<div class="card-header">
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-4">
+									<button type="button" class="btn btn-outline-primary btn-block" onclick="location.href='./importar.html'">Importar de Excel</button>
+								</div>
+								<div class="col-md-4">
+									<button type="button" class="btn btn-outline-primary btn-block" onclick="location.href='./actualizacion.html'">Actualizar información de Centros de Venta</button>
+								</div>
+								<div class="col-md-4">
+									<button type="button" class="btn btn-outline-primary btn-block" onclick="location.href='./contraseña.html'">Cambiar contraseña de root</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="./js/xdomain.min.js" slave="https://decomiso-rtm.000webhostapp.com/proxy.html"></script>
+		<script type="application/javascript" src="./js/jquery.js"></script>
+		<script type="application/javascript" src="./js/sesionAdmin.js"></script>
+	</body>
+</html>
