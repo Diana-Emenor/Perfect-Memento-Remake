@@ -2,6 +2,8 @@ $(function(){
 	$.ajax({
 		url: "https://decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (info, textStatus, xhr) {
 			var info2 = JSON.parse(info);
@@ -24,6 +26,8 @@ $(function(){
 			dataType: "json",
 			data: data,
 			type: "POST",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			crossDomain: true,
 			success: function (algo) {
 				console.log(algo);
@@ -39,6 +43,8 @@ $(function(){
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/logout.php",
 			type: "GET",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			crossDomain: true,
 			success: function () {
 				alert("Sesión cerrada correctamente");

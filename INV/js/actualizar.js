@@ -7,6 +7,8 @@ $(function(){
 				empresa: $("#empresa").val()
 			},
 			type: "GET",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			crossDomain: true,
 			success: function (page) {
 				console.log(page)
@@ -29,6 +31,8 @@ $(function(){
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/obtener-datos-ceve.php",
 			dataType: "json",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				ceve: $("#ceve").val()
 			},
@@ -58,6 +62,8 @@ $(function(){
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/actualizar-datos.php",
 			dataType: "json",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				empresa: $("#empresa").val(),
 				ceve: $("#ceve").val(),

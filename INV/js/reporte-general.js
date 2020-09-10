@@ -10,6 +10,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Receive-Inv.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		success: function (page) {
 			console.log(page);
 			for (var i = 0; i < page.length; i++) {
@@ -34,6 +36,8 @@ $(function(){
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/exportarCVS.php",
 			dataType: "text",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				data: str
 			},
@@ -68,6 +72,8 @@ $(function(){
 				data: str
 			},
 			type: "POST",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			success: function (file) {
 				$.fileDownload('./' + file)
 					.done(function () {

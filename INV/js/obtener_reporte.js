@@ -2,6 +2,8 @@ $(function(){
 	$.ajax({
 		url: "https://decomiso-rtm.000webhostapp.com/php/Receive-Inv.php",
 		dataType: "json",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		type: "GET",
 		success: function (page) {
 			console.log(page);

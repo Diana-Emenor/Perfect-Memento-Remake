@@ -36,6 +36,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		success: function (page) {
 			var totalCelulares = 0;
 			var totalHandHelds = 0;
@@ -66,6 +68,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		success: function (page) {
 			$("#CelEnv").append("Con el 10% de stock: <br><strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
 			$("#CelStock").append("Enviados a Cebes: <br><strong>" + new Intl.NumberFormat("en-us").format(page[1].toFixed(0)) + "</strong>");
@@ -84,6 +88,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-resumen-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		success: function (page) {
 			$("#real").append("Real: " + new Intl.NumberFormat("en-us").format(page[0]));
 			if(page[1] > 0) {
@@ -226,6 +232,8 @@ $(function(){
 				data: str
 			},
 			type: "POST",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			success: function (file) {
 				$.fileDownload('./' + file)
 					.done(function () {

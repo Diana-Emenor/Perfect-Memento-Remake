@@ -22,6 +22,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			$("#CelTotalBarcel").append("<strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
@@ -75,6 +77,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			$("#CelTotalBimbo").append("<strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
@@ -128,6 +132,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			$("#CelTotalRicolino").append("<strong>" + new Intl.NumberFormat("en-us").format(page[0]) + "</strong>");
@@ -181,6 +187,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/reporte-GENERAL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			$("#totalBodegaBARCEL").append(new Intl.NumberFormat("en-us").format(page[0]));
@@ -211,6 +219,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain : true,
 		success: function (page) {
 			dataricolino = page;
@@ -223,6 +233,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			databimbo = page;
@@ -235,6 +247,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			databarcel = page;
@@ -248,6 +262,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BARCEL.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			var totalCelulares = 0;
@@ -267,6 +283,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-BIMBO.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			var totalCelulares = 0;
@@ -286,6 +304,8 @@ $(function(){
 		url: "https://decomiso-rtm.000webhostapp.com/php/Obtener-reporte-RICOLINO.php",
 		dataType: "json",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true,
 		success: function (page) {
 			var totalCelulares = 0;
@@ -319,6 +339,9 @@ $(function(){
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/exportarExcel.php",
 			dataType: "text",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				data: tabla
 			},

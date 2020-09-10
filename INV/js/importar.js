@@ -2,6 +2,8 @@ $(document).ready(function () {
 	$.ajax({
 		url: "https://decomiso-rtm.000webhostapp.com/php/obtenerSesion.php",
 		type: "GET",
+		headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 		crossDomain: true
 	})
 	.done(function (info) {
@@ -56,6 +58,8 @@ $(document).ready(function () {
 			url: 'https://decomiso-rtm.000webhostapp.com/php/subir-Resto.php',
 			type: 'POST',
 			crossDomain: true,
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				file: filename
 			}
@@ -77,6 +81,8 @@ $(document).ready(function () {
 			type: "POST",
 			crossDomain: true,
 			datatype: "text",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				data: data
 			}
@@ -95,6 +101,8 @@ $(document).ready(function () {
 			url: "https://decomiso-rtm.000webhostapp.com/php/obtener-Inventario.php",
 			type: "POST",
 			crossDomain: true,
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			data: {
 				file: filename
 			}
@@ -132,6 +140,8 @@ $(document).ready(function () {
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/BorrarDatos.php",
 			type: "POST",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			crossDomain: true
 		})
 		.done( function (info) {
@@ -198,6 +208,8 @@ $(document).ready(function () {
 		$.ajax({
 			url: "https://decomiso-rtm.000webhostapp.com/php/logout.php",
 			type: "GET",
+			headers: {  'Access-Control-Allow-Origin': 'https://decomiso-rtm.000webhostapp.com/',
+						"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"},
 			crossDomain: true
 		})
 		.done(function () {
