@@ -13,8 +13,8 @@ $(function(){
 		},
 		error: function (x, estado, exception) {
 			console.log(x);
-			alert("No ha iniciado sesion, " +  + " " + estado + " redireccionando...");
-			location.href='./index.html';
+			//alert("No ha iniciado sesion, " +  + " " + estado + " redireccionando...");
+			//location.href='./index.html';
 		}
 	});
 	
