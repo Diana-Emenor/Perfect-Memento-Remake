@@ -14,8 +14,9 @@ $(document).ready(function () {
 		}
 	})
 	.fail(function (x, estado, exception) {
-		alert("No ha iniciado sesion, redireccionando...");
-		location.href='./index.html';
+		console.log(x);
+		//alert("No ha iniciado sesion, redireccionando...");
+		//location.href='./index.html';
 	});
 
     function getExtension(string) {
