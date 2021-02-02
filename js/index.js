@@ -6,13 +6,11 @@ $(function(){
 		window.location.href = "./"+ Type +".html";
 	}
 	
+	//Fairy menu
 	$("#cirno").click(function(event) {
 		migrate(event, "Cirno", "Fairy");
 	});
 	$("#lily").click(function(event) {
-		migrate(event, "LilyWhite", "Fairy");
-	});
-	$("#lily2").click(function(event) {
 		migrate(event, "LilyWhite", "Fairy");
 	});
 	$("#sunny").click(function(event) {
@@ -39,7 +37,7 @@ $(function(){
 		migrate(event, "Lyrica", "Yuurei");
 	});
 	
-	//Youkai
+	//Youkai menu
 	$("#rumia").click(function(event) {
 		migrate(event, "Rumia", "Youkai");
 	});
@@ -63,5 +61,10 @@ $(function(){
 	});
 	$("#yukari").click(function(event) {
 		migrate(event, "Yukari", "Youkai");
+	});
+	
+	//summary table
+	$("#lily2").click(function(event) {
+		migrate(event, "LilyWhite", "Fairy");
 	});
 });
