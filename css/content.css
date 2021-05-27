@@ -60,3 +60,15 @@ hr {
 .table-bordered td {
 	border: 1px solid #000 !important;
 }
+
+.spacedtext1 {
+	padding-left: 1em;
+}
+
+.spacedtext2 {
+	padding-left: 2em;
+}
+
+.spacedtext3 {
+	padding-left: 4em;
+}
